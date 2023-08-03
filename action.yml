@@ -3,7 +3,6 @@ description: 'GitHub Action to easily import a GPG key'
 branding:
   color: 'yellow'
   icon: 'lock'
-
 inputs:
   gpg_private_key:
     description: 'GPG private key exported as an ASCII armored version or its base64 encoding'
