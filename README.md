@@ -66,7 +66,7 @@ jobs:
         uses: actions/checkout@v3
       -
         name: Import GPG key
-        uses: conventional-actions/import-gpg@v5
+        uses: conventional-actions/import-gpg@v1
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -93,7 +93,7 @@ jobs:
         uses: actions/checkout@v3
       -
         name: Import GPG key
-        uses: conventional-actions/import-gpg@v5
+        uses: conventional-actions/import-gpg@v1
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -128,7 +128,7 @@ jobs:
         uses: actions/checkout@v3
       -
         name: Import GPG key
-        uses: conventional-actions/import-gpg@v5
+        uses: conventional-actions/import-gpg@v1
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -179,7 +179,7 @@ jobs:
         uses: actions/checkout@v3
       -
         name: Import GPG key
-        uses: conventional-actions/import-gpg@v5
+        uses: conventional-actions/import-gpg@v1
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
