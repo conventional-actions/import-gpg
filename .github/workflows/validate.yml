@@ -11,9 +11,14 @@ on:
       - 'releases/v*'
   pull_request:
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     outputs:
       targets: ${{ steps.targets.outputs.matrix }}
     steps:
@@ -28,6 +33,7 @@ jobs:
 
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     needs:
       - prepare
     strategy:

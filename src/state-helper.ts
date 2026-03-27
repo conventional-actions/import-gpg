@@ -1,12 +1,12 @@
-import * as core from '@actions/core';
+import * as core from '@actions/core'
 
-export const IsPost = !!process.env['STATE_isPost'];
-export const fingerprint = process.env['STATE_fingerprint'] || '';
+export const IsPost = !!process.env['STATE_isPost']
+export const fingerprint = process.env['STATE_fingerprint'] || ''
 
 export function setFingerprint(fingerprint: string) {
-  core.saveState('fingerprint', fingerprint);
+  core.saveState('fingerprint', fingerprint)
 }
 
 if (!IsPost) {
-  core.saveState('isPost', 'true');
+  core.saveState('isPost', 'true')
 }

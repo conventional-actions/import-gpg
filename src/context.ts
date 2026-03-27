@@ -1,18 +1,18 @@
-import * as core from '@actions/core';
+import * as core from '@actions/core'
 
 export interface Inputs {
-  gpgPrivateKey: string;
-  passphrase: string;
-  trustLevel: string;
-  gitConfigGlobal: boolean;
-  gitUserSigningkey: boolean;
-  gitCommitGpgsign: boolean;
-  gitTagGpgsign: boolean;
-  gitPushGpgsign: string;
-  gitCommitterName: string;
-  gitCommitterEmail: string;
-  workdir: string;
-  fingerprint: string;
+  gpgPrivateKey: string
+  passphrase: string
+  trustLevel: string
+  gitConfigGlobal: boolean
+  gitUserSigningkey: boolean
+  gitCommitGpgsign: boolean
+  gitTagGpgsign: boolean
+  gitPushGpgsign: string
+  gitCommitterName: string
+  gitCommitterEmail: string
+  workdir: string
+  fingerprint: string
 }
 
 export async function getInputs(): Promise<Inputs> {
@@ -29,5 +29,5 @@ export async function getInputs(): Promise<Inputs> {
     gitCommitterEmail: core.getInput('git_committer_email'),
     workdir: core.getInput('workdir') || '.',
     fingerprint: core.getInput('fingerprint')
-  };
+  }
 }

@@ -18,6 +18,10 @@ on:
       - 'main'
       - 'releases/v*'
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   gpg:
     runs-on: ubuntu-latest
