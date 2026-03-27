@@ -99,16 +99,16 @@ export const getDirs = async (): Promise<Dirs> => {
 
       for (const line of res.stdout.replace(/\r/g, '').trim().split(/\n/g)) {
         if (line.startsWith('libdir:')) {
-          libdir = line.substr('libdir:'.length).replace('%3a', ':').trim()
+          libdir = line.substr('libdir:'.length).replaceAll('%3a', ':').trim()
         } else if (line.startsWith('libexecdir:')) {
           libexecdir = line
             .substr('libexecdir:'.length)
-            .replace('%3a', ':')
+            .replaceAll('%3a', ':')
             .trim()
         } else if (line.startsWith('datadir:')) {
-          datadir = line.substr('datadir:'.length).replace('%3a', ':').trim()
+          datadir = line.substr('datadir:'.length).replaceAll('%3a', ':').trim()
         } else if (line.startsWith('homedir:')) {
-          homedir = line.substr('homedir:'.length).replace('%3a', ':').trim()
+          homedir = line.substr('homedir:'.length).replaceAll('%3a', ':').trim()
         }
       }
 
